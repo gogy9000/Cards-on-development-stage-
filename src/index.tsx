@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 import {createGlobalStyle, ThemeProvider} from "styled-components";
 import {BrowserRouter} from 'react-router-dom';
+import { AppStyled } from './styled-components/AppStyled';
 
 const Global = createGlobalStyle`
   * {
@@ -29,7 +30,7 @@ root.render(
         <BrowserRouter>
             <ThemeProvider theme={theme}>
             <Global/>
-            <App/>
+            <App />
                 </ThemeProvider>
         </BrowserRouter>
     </>

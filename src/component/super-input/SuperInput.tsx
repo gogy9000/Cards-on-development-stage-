@@ -1,5 +1,5 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent} from 'react'
-import s from './SuperInputText.module.css'
+
 
 
 // тип пропсов обычного инпута
@@ -40,9 +40,9 @@ export const SuperInputText: React.FC<SuperInputTextPropsType> = (
         && onEnter() // то вызвать его
     }
 
-    const finalSpanClassName = error?`${s.error} ${spanClassName ? spanClassName : ''}`:''
-
-    const finalInputClassName = error?`${error?error:s.errorInputDefault}`:`${className?className:s.superInputDefault}` // need to fix with (?:) and s.superInput
+    // const finalSpanClassName = error?`${s.error} ${spanClassName ? spanClassName : ''}`:''
+    //
+    // const finalInputClassName = error?`${error?error:s.errorInputDefault}`:`${className?className:s.superInputDefault}` // need to fix with (?:) and s.superInput
 
     return (
         <>
@@ -50,11 +50,15 @@ export const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 type={'text'}
                 onChange={onChangeCallback}
                 onKeyPress={onKeyPressCallback}
-                className={finalInputClassName}
+               /* className={finalInputClassName}*/
+
+
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-            {error && <span className={finalSpanClassName}>{error}</span>}
+            {error && <span
+                // className={finalSpanClassName}
+            >{error}</span>}
         </>
     )
 }

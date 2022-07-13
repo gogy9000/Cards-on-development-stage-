@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/fryday-project/static/css/main.073c9b0a.css",
-    "main.js": "/fryday-project/static/js/main.15896a43.js",
+    "main.js": "/fryday-project/static/js/main.8d10cc81.js",
     "static/js/787.fe693919.chunk.js": "/fryday-project/static/js/787.fe693919.chunk.js",
-    "static/media/logo.svg": "/fryday-project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/fryday-project/index.html",
     "main.073c9b0a.css.map": "/fryday-project/static/css/main.073c9b0a.css.map",
-    "main.15896a43.js.map": "/fryday-project/static/js/main.15896a43.js.map",
+    "main.8d10cc81.js.map": "/fryday-project/static/js/main.8d10cc81.js.map",
     "787.fe693919.chunk.js.map": "/fryday-project/static/js/787.fe693919.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.15896a43.js"
+    "static/js/main.8d10cc81.js"
   ]
 }

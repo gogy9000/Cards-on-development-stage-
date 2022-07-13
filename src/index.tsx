@@ -5,7 +5,9 @@ import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 import {createGlobalStyle, ThemeProvider} from "styled-components";
 import {BrowserRouter} from 'react-router-dom';
-import { AppStyled } from './styled-components/AppStyled';
+import {AppStyled} from './styled-components/AppStyled';
+import {Provider} from 'react-redux';
+import {store} from './bll/Store';
 
 const Global = createGlobalStyle`
   * {
@@ -13,10 +15,10 @@ const Global = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }`
-const theme={
+const theme = {
     colors: {
-       dark:"black",
-       light:'white'
+        dark: "black",
+        light: 'white'
     }
 }
 
@@ -28,10 +30,12 @@ root.render(
 
     <>
         <BrowserRouter>
-            <ThemeProvider theme={theme}>
-            <Global/>
-            <App />
+            <Provider store={store}>
+                <ThemeProvider theme={theme}>
+                    <Global/>
+                    <App/>
                 </ThemeProvider>
+            </Provider>
         </BrowserRouter>
     </>
     // </React.StrictMode>

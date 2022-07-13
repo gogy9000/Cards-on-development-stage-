@@ -6,10 +6,13 @@ import {Test} from './Test';
 import { AppStyled } from './styled-components/AppStyled';
 
 import {Navigate, Route, Routes} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
 export  const App=()=> {
+   const s=useSelector((state:any)=>state.AppReducer)
+    console.log(s)
     return (
         <div>
             <Routes>
@@ -20,7 +23,6 @@ export  const App=()=> {
                 <Route path='/recoveryPassvord' element={<RecoveryPassvord/>}/>
                 <Route path='/newPassvord' element={<NewPassvord/>}/>
                 <Route path='/*' element={<Navigate to='/404'/>}/>
-
                 <Route path='/404' element={<NotFound/>}/>
             </Routes>
         </div>

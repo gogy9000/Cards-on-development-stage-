@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
-import {SuperButton} from "./component/super-button/SuperButton";
-import styled from 'styled-components';
 import {Test} from './Test';
-import { AppStyled } from './styled-components/AppStyled';
 
 import {Navigate, Route, Routes} from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -11,8 +8,10 @@ import { useSelector } from 'react-redux';
 
 
 export  const App=()=> {
-   const s=useSelector((state:any)=>state.AppReducer)
-    console.log(s)
+
+   const state=useSelector((state:any)=>state.AppReducer)
+    console.log(state)
+
     return (
         <div>
             <Routes>
@@ -20,8 +19,8 @@ export  const App=()=> {
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/registration' element={<Registration/>}/>
                 <Route path='/profile' element={<Profile/>}/>
-                <Route path='/recoveryPassvord' element={<RecoveryPassvord/>}/>
-                <Route path='/newPassvord' element={<NewPassvord/>}/>
+                <Route path='/recoveryPass' element={<RecoveryPass/>}/>
+                <Route path='/newPass' element={<NewPass/>}/>
                 <Route path='/*' element={<Navigate to='/404'/>}/>
                 <Route path='/404' element={<NotFound/>}/>
             </Routes>
@@ -44,10 +43,10 @@ const Profile = () => {
 const NotFound = () => {
     return <div>NotFound</div>
 }
-const RecoveryPassvord = () => {
-    return <div>RecoveryPassvord</div>
+const RecoveryPass = () => {
+    return <div>RecoveryPass</div>
 }
-const NewPassvord = () => {
-    return <div>NewPassvord</div>
+const NewPass = () => {
+    return <div>NewPass</div>
 }
 
